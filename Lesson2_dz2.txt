@@ -1,0 +1,29 @@
+mysql> DROP DATABASE IF EXISTS example;
+Query OK, 1 row affected (0,26 sec)
+
+mysql> CREATE DATABASE IF NOT  EXISTS example;
+Query OK, 1 row affected (0,05 sec)
+
+mysql> USE example;
+Database changed
+mysql> CREATE TABLE IF NOT EXISTS users (id INT PRIMARY KEY, name VARCHAR(10));
+Query OK, 0 rows affected (0,39 sec)
+
+mysql> SHOW TABLES;
++-------------------+
+| Tables_in_example |
++-------------------+
+| users             |
++-------------------+
+1 row in set (0,01 sec)
+
+mysql> DESCRIBE users;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(11)     | NO   | PRI | NULL    |       |
+| name  | varchar(10) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0,29 sec)
+
+mysql> 
